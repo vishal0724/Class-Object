@@ -13,6 +13,7 @@ class work:
 	
 	def __repr__(self):
 		return 'This is the class "work".'
+	
 # %%
 df1 = work()
 print(df1)
