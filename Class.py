@@ -1,22 +1,30 @@
-class work:
-	def __init__(self):
-		# print('I am in the constructor')
-		self.name = 'Vishal'
-		self.age = 20
+class Item:
+    # print("I am called!!")
+    price_discount = 0.8
+    all = []
 
-	def creator(self):
-		return print('{} is the creator of this class'.format(self.name))
-	
-	def __repr__(self):
-		return 'This is the class "work".'
-	
-	@staticmethod
-	def status():
-		return print("Don't disturb, I am working.")
-	
+    def __init__(self, name: str, price: float, quantity=0):
+        assert price >= 0, f"price({price}) is not acceptable!!"
+        assert quantity >= 0, f"quantity({quantity}) is not acceptable!!"
 
-df1 = work()
-print(df1)
-print(df1.creator())
-print(df1.age)
-print(df1.status())
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+
+        Item.all.append(self)
+
+    def __str__(self):
+        return(self.name)
+    def __repr__(self):
+        return (f"Item ({self.name},{self.price}, {self.quantity})")
+
+    def total_price(self):
+        return self.price * self.quantity
+    def priceAfterDiscount(self):
+        return self.price * self.price_discount
+
+i1 = Item('Phone', 1000, 4)
+i2 = Item('Laptop', 10000, 2)
+
+print(Item.all)
+print(i1.all)
