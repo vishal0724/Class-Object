@@ -4,4 +4,4 @@
 
 Author --Vishal Kumar(Student)
 <br>
-this is from sub_main branch (main).
+this is from sub_main branch (main branch).
