@@ -7,3 +7,5 @@ p3 = Phone("Phone3", 500, 2, 1)
 
 print(p1, p2, p3)
 print(p1.all)
+
+print(Phone.all)
